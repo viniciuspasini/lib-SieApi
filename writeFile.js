@@ -1,6 +1,7 @@
 import chalk from 'chalk'
 import fs from 'fs'
 import { promises } from 'dns'
+import 'dotenv/config';
 
 export async function writeFile(response){
     try {
