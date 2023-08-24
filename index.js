@@ -8,7 +8,7 @@ requestSieApi()
     writeFile(retorno)
 })
 .catch(err => {
-    console.log(err)
+    console.log(chalk.red('ERROR:'), err)
 })
 
 

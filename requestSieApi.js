@@ -1,9 +1,3 @@
-import chalk from 'chalk'
-import https from 'https'
-import fs from 'fs'
-import { promises } from 'dns'
-import 'dotenv/config';
-
 
 export async function requestSieApi(){
     
