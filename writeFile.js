@@ -7,7 +7,7 @@ export async function writeFile(response){
         let dateParts = response.fecha.split('/')
         let dateObject = new Date(dateParts[2]+'-'+dateParts[1]+'-'+dateParts[0]);
         dateObject.setDate(dateObject.getDate() + 1)
-        const nameFile = dateObject.getDate()+'-'+(dateObject.getMonth() + 1).toString().padStart(2, '0')+'-'+dateObject.getFullYear()+'-'+'.txt'
+        const nameFile = dateObject.getDate()+'-'+(dateObject.getMonth() + 1).toString().padStart(2, '0')+'-'+dateObject.getFullYear()+'.txt'
         await fs.promises.writeFile(path+nameFile,response.dato)
         console.log(chalk.green('fichero '+ nameFile +' creado'))
     } catch (err) {
